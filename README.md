@@ -47,7 +47,7 @@ from tobrot.sample_config import Config
 class Config(Config):
   TG_BOT_TOKEN = ""
   APP_ID = 6
-  API_HASH = "eb06d4abfb49dc3eeb1aeb98ae0f581e"
+  API_HASH = "7bcf61fcd32b8652cd5876b02dcf57ae"
   AUTH_CHANNEL = --1001093703378
 ```
 
