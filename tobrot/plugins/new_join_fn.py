@@ -34,8 +34,8 @@ async def new_join_f(client, message):
 
 async def help_message_f(client, message):
       await message.reply_text("no one gonna help you 🤣🤣🤣🤣", quote=True)
-     channel_id = str(AUTH_CHANNEL)[8:]
-     message_id = 4
+     channel_id = str(AUTH_CHANNEL)[9]
+     message_id = 9
       display the /help
     
     await message.reply_text("""Ask Here for any support > @MovesCompany""", disable_web_page_preview=True)
