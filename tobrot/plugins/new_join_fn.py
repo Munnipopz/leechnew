@@ -28,17 +28,19 @@ async def new_join_f(client, message):
             chat_id=message.chat.id,
             delete=True
         )
-      delete all other messages, except for AUTH_CHANNEL
+    # delete all other messages, except for AUTH_CHANNEL
     await message.delete(revoke=True)
 
 
 async def help_message_f(client, message):
-      await message.reply_text("no one gonna help you 🤣🤣🤣🤣", quote=True)
-     channel_id = str(AUTH_CHANNEL)[9]
-     message_id = 9
-      display the /help
-    
-    await message.reply_text("""Ask Here for any support > @MovesCompany""", disable_web_page_preview=True)
+    # await message.reply_text("no one gonna help you 🤣🤣🤣🤣", quote=True)
+    channel_id = str(AUTH_CHANNEL)[4:]
+    message_id = 99
+    # display the /help message
+    await message.reply_text(
+        f"please read the <a href='https://t.me/c/{channel_id}/{message_id}'>Pinned Message</a>",
+        quote=True
+    )
 
 
 async def rename_message_f(client, message):
@@ -46,12 +48,12 @@ async def rename_message_f(client, message):
     inline_keyboard.append([
         pyrogram.InlineKeyboardButton(
             text="read this?",
-            url="https://t.me/joinchat/Oq1jlViv1uS2AkOG9MKChw"
+            url="https://t.me/keralagram/698909"
         )
     ])
     reply_markup = pyrogram.InlineKeyboardMarkup(inline_keyboard)
     await message.reply_text(
-        "please use @RenameaThumpbot",
+        "please use @renamebot",
         quote=True,
         reply_markup=reply_markup
     )
